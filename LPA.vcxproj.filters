@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="util">
+      <UniqueIdentifier>{76f63abe-dacf-423a-85f6-56b679a2a892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{b46f8042-f366-4db8-8a3e-dc1d0f41bdba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{1b92e7e4-c594-4bed-8d01-f3bc4c5d094d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="control\BUILDUPLOAD.bat">
+      <Filter>util</Filter>
+    </None>
+    <None Include="control\makefile">
+      <Filter>util</Filter>
+    </None>
+    <None Include="control\makefilevs">
+      <Filter>util</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="control\ProcessMessages.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\Config.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\LPA.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\Message.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\ProcessKeys.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\ProcessLCD.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\ProcessLeds.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="control\ProcessPresurarization.c">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="control\Config.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\LPADecompressieLib\LPA_lib_decompressie.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\Message.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\ProcessKeys.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\ProcessLCD.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\VSIntelliSenseFix.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\ProcessMessages.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\ProcessLeds.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="control\ProcessPresurarization.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

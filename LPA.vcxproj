@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CONTROL - COMPILE AND UPLOAD|Win32">
+      <Configuration>CONTROL - COMPILE AND UPLOAD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="control\BUILDUPLOAD.bat" />
+    <None Include="control\makefile" />
+    <None Include="control\makefilevs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="control\Config.c" />
+    <ClCompile Include="control\LPA.c" />
+    <ClCompile Include="control\Message.c" />
+    <ClCompile Include="control\ProcessKeys.c" />
+    <ClCompile Include="control\ProcessLCD.c" />
+    <ClCompile Include="control\ProcessLeds.c" />
+    <ClCompile Include="control\ProcessMessages.c" />
+    <ClCompile Include="control\ProcessPresurarization.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="control\Config.h" />
+    <ClInclude Include="control\LPADecompressieLib\LPA_lib_decompressie.h" />
+    <ClInclude Include="control\Message.h" />
+    <ClInclude Include="control\ProcessKeys.h" />
+    <ClInclude Include="control\ProcessLCD.h" />
+    <ClInclude Include="control\ProcessLeds.h" />
+    <ClInclude Include="control\ProcessMessages.h" />
+    <ClInclude Include="control\ProcessPresurarization.h" />
+    <ClInclude Include="control\VSIntelliSenseFix.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{37A42495-D54F-4BA1-9C69-788A3AFFD401}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>template</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CONTROL - COMPILE AND UPLOAD|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CONTROL - COMPILE AND UPLOAD|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CONTROL - COMPILE AND UPLOAD|Win32'">
+    <NMakeBuildCommandLine>.\control\BUILDUPLOAD.bat</NMakeBuildCommandLine>
+    <IncludePath>$(AVR32_HOME)\avr\include;$(AVR32_HOME)\avr\include\avr;$(AVR32_HOME)\RobotLoader\;$(AVR32_HOME)\RobotLoader\RP6Lib;$(AVR32_HOME)\RobotLoader\RP6Lib\RP6base;$(AVR32_HOME)\RobotLoader\RP6Lib\RP6common;$(AVR32_HOME)\RobotLoader\RP6Lib\RP6control;$(AVR32_HOME)\RobotLoader\RP6Lib\RP6control_M256_WIFI;.\control;.\control\LPADecompressieLib;$(IncludePath)</IncludePath>
+    <NMakeReBuildCommandLine>.\control\BUILDUPLOAD.bat</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

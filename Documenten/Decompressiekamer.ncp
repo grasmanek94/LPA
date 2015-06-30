@@ -1,0 +1,86 @@
+<Project>
+  <Name>Decompressiekamer</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Message</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Message</Name>
+        <Access>Public</Access>
+        <Location left="22" top="15" />
+        <Size width="284" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Message(SerialPort port)</Member>
+        <Member type="Property">public bool IsCorrupt { get; }</Member>
+        <Member type="Property">public int Action { get; set; }</Member>
+        <Member type="Property">public int ExpectedCorruptionCheck { get; }</Member>
+        <Member type="Property">public byte DataLength { get; }</Member>
+        <Member type="Method">public bool Read_Int16(ref Int16 output)</Member>
+        <Member type="Method">public bool Read_byte(ref byte output)</Member>
+        <Member type="Method">public bool Write_Int16(Int16 input)</Member>
+        <Member type="Method">public bool Write_byte(byte input)</Member>
+        <Member type="Method">public byte Receive()</Member>
+        <Member type="Method">public byte Send()</Member>
+        <Member type="Method">public void BeginWrite()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DecompressieKamer</Name>
+        <Access>Public</Access>
+        <Location left="338" top="15" />
+        <Size width="281" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public DecompressieKamer(int maxTries)</Member>
+        <Member type="Property">public ushort PressureMilliBar { get; }</Member>
+        <Member type="Property">public bool VentValveOpen { get; }</Member>
+        <Member type="Property">public bool AirPumpOn { get; set; }</Member>
+        <Member type="Property">public bool AreValuesUpToDate { get; }</Member>
+        <Member type="Property">public bool ControlFromPC { get; set; }</Member>
+        <Member type="Property">public byte PressureGlobalBar { get; set; }</Member>
+        <Member type="Method">public void StartProcessing()</Member>
+        <Member type="Method">public void ProcessSerial(object sender, EventArgs e)</Member>
+        <Member type="Method">public bool Dispose()</Member>
+        <Member type="Event">public event OnEventHandler OnEvent</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Form</Name>
+        <Access>Public</Access>
+        <Location left="388" top="305" />
+        <Size width="162" height="77" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>313</X>
+          <Y>138</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>467</X>
+          <Y>285</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>467</X>
+          <Y>304</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
